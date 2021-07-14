@@ -1,0 +1,11 @@
+FROM python:3.7.4-alpine
+
+<<<<<<< HEAD
+RUN pip install pymongo elasticsearch6
+=======
+RUN pip install kubernetes kafka-python elasticsearch
+RUN apk add --no-cache tzdata \
+    && ln -snf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
+    && echo "Asia/Shanghai" > /etc/timezone
+ENV TZ Asia/Shanghai
+>>>>>>> c0c0867b6d34d95ba57547a41826786cb9e766f2
